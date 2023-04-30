@@ -1,81 +1,53 @@
-html {
-    height: 100%;
-}
-
-body {
-	background: url('/media/Logo1.JPG') no-repeat center center fixed;
-	background-size: cover;
-    height: calc(100vh - 164px);
-    color: #ff0808;
-    font-family: "Lato";
-}
-
-/* from Bulma */
-.icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
-}
-
-.logo-font {
-    text-transform: uppercase;
-}
-
-.main-logo-link {
-    width: fit-content;
-}
-
-.shop-now-button {
-    background: black;
-    color: white;
-    min-width: 260px;
-}
-
-.btn-black {
-    background: black;
-    color: white;
-}
-
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #222;
-    color: white;
-}
-
-.text-black {
-    color: #000 !important;
-}
-
-.border-black {
-    border: 1px solid black !important;
-}
-
-/* --------------------------------- Media queries */
-
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
+/* Style for the navigation bar */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
   }
-}
-
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
-
-    .header-container {
-        padding-top: 164px;
-    }
-}
+  
+  .nav-link {
+    font-size: 1.2rem;
+    margin-right: 1.5rem;
+  }
+  
+  /* Style for the jumbotron */
+  .jumbotron {
+    background-image: url('https://cdn.pixabay.com/photo/2017/09/10/02/18/plant-2739811_960_720.jpg');
+    background-size: cover;
+    color: #fff;
+  }
+  
+  .display-4 {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+  
+  .lead {
+    font-size: 1.5rem;
+  }
+  
+  .btn-primary {
+    background-color: #29a745;
+    border-color: #29a745;
+  }
+  
+  .btn-primary:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+  }
+  
+  /* Style for the footer */
+  footer {
+    background-color: #f8f9fa;
+    padding: 3rem;
+    text-align: center;
+  }
+  
+  .footer-link {
+    color: #6c757d;
+    text-decoration: none;
+  }
+  
+  .footer-link:hover {
+    color: #495057;
+  }
+  
