@@ -1,7 +1,7 @@
 /* Style for the navigation bar */
 
 .navbar {
-  background-color: burlywood;
+  background-color: bisque;
 }
 
 .navbar-brand {
@@ -18,12 +18,17 @@
 
 /* Style for the jumbotron */
 .jumbotron {
-  background-image: url('/media/Logo1.JPG');
+  background-image: url('/media/homepic.jpg');
+  background-size: 100%;
   background-position: center;
+  background-repeat: no-repeat;
   height: 100vh;
   font-weight: bold;
   font-family: "Rubik Pixels";
-  color: #29a745;
+  color: whitesmoke;
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+  
 }
 
 .display-4 {
@@ -34,7 +39,7 @@
 .lead {
   font-size: 2rem;
   font-weight: bold;
-  color: #29a745; 
+  color: whitesmoke; 
 }
 
 .btn-primary {
@@ -50,16 +55,23 @@
 
 /* Style for the footer */
 footer {
-  background-color: #f8f9fa;
-  padding: 3rem;
+  background-color: lightslategray;
+  color: #fafafa;
+  min-height: 50px;
+  margin: 0;
+}
+
+.social-networks{
   text-align: center;
+  margin: 0;
 }
 
-.footer-link {
-  color: #6c757d;
-  text-decoration: none;
+.social-networks li{
+  display: inline;
 }
 
-.footer-link:hover {
-  color: #495057;
-}
+.social-networks i{
+  font-size: 160%;
+  margin: 1%;
+  padding: 1% 5% 1% 5%;
+  color: black;
