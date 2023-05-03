@@ -1,52 +1,65 @@
 /* Style for the navigation bar */
+
+.navbar {
+  background-color: burlywood;
+}
+
 .navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .nav-link {
-    font-size: 1.2rem;
-    margin-right: 1.5rem;
-  }
-  
-  /* Style for the jumbotron */
-  .jumbotron {
-    background-size: cover;
-    color: #fff;
-  }
-  
-  .display-4 {
-    font-size: 4rem;
-    font-weight: bold;
-  }
-  
-  .lead {
-    font-size: 1.5rem;
-  }
-  
-  .btn-primary {
-    background-color: #29a745;
-    border-color: #29a745;
-  }
-  
-  .btn-primary:hover {
-    background-color: #218838;
-    border-color: #1e7e34;
-  }
-  
-  /* Style for the footer */
-  footer {
-    background-color: #f8f9fa;
-    padding: 3rem;
-    text-align: center;
-  }
-  
-  .footer-link {
-    color: #6c757d;
-    text-decoration: none;
-  }
-  
-  .footer-link:hover {
-    color: #495057;
-  }
-  
+  font-size: 5rem;
+  font-weight: bold;
+  font-family: "Rubik Pixels";
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  margin-right: 1.5rem;
+}
+
+
+/* Style for the jumbotron */
+.jumbotron {
+  background-image: url('/media/Logo1.JPG');
+  background-position: center;
+  height: 100vh;
+  font-weight: bold;
+  font-family: "Rubik Pixels";
+  color: #29a745;
+}
+
+.display-4 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.lead {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #29a745; 
+}
+
+.btn-primary {
+  background-color: #29a745;
+  border-color: #29a745;
+  min-width: 260px;
+}
+
+.btn-primary:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+/* Style for the footer */
+footer {
+  background-color: #f8f9fa;
+  padding: 3rem;
+  text-align: center;
+}
+
+.footer-link {
+  color: #6c757d;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #495057;
+}

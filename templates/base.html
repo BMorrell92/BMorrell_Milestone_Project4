@@ -16,6 +16,7 @@
     {% block corecss %}
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
+        <link href="https://fonts.googleapis.com/css2?family=Freehand&family=Rubik+Pixels&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
@@ -32,7 +33,7 @@
     {% block extra_js %}
     {% endblock %}
 
-    <title>GeoPotz - Unique Plant Pots {% block extra_title %}{% endblock %}</title>
+  <title>GeoPotz - Unique Plant Pots {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -54,23 +55,19 @@
         </ul>
       </div>
     </nav>
-
-    <div class="jumbotron">
-      <h1 class="display-4">Unique Plant Pots</h1>
-      <p class="lead">Discover our stunning selection of one-of-a-kind plant pots, crafted from 3D-printed molds for a truly unique touch.</p>
-      <hr class="my-4">
-      <p>Shop now and give your plants the stylish home they deserve.</p>
-      <a class="btn btn-primary btn-lg" href="#" role="button">Shop Now</a>
-    </div>
     
-    {% if messages %}
-        <div class="message-container"></div>
-    {% endif %}
-
     {% block page_header %}
     {% endblock %}
 
     {% block content %}
+    <footer class="container-fluid">
+      <ul class="social-networks">
+          <li><a href="https://www.discord.com" target="_blank"><i class="fa-brands fa-discord" aria-hidden="true"> </i></a></li>
+          <li><a href="https://soundcloud.com/jamsgalacticafm" target="_blank"><i class="fa-brands fa-soundcloud" aria-hidden="true"> </i></a></li>
+          <li><a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube" aria-hidden="true" > </i></a></li>
+          <li><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram" aria-hidden="true"> </i></a></li>
+      </ul>
+    </footer>
     {% endblock %}
 
     {% block postloadjs %}
