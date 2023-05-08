@@ -1,108 +1,204 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome BMorrell92,
+# GeoPotz (Online Store) 
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Milestone Project 4 - Full Stack Development 
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+* GeoPotz is an online web store that allows users to make online purchases. This is a responsive website to allow for use with any device.   
 
-## Gitpod Reminders
+* This is my Milestone Project 4 submission for Code Institute's Diploma in Web Application Development course. My website hosts all the features you'd expect to find with a modern online store and is built using technologies that I have learnt including HTML, CSS, JavaScript, Python and the Django framework.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Live Project 
 
-`python3 -m http.server`
+[View the live project here.](https://notes-ben-ms3.herokuapp.com/)
 
-A blue button should appear to click: _Make Public_,
+## Repository
 
-Another blue button should appear to click: _Open Browser_.
+[Find the project repository here](https://github.com/BMorrell92/BMorrell_Milestone_Project3)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+# Table of Contents  
 
-A blue button should appear to click: _Make Public_,
+## Contents
+- [User Stories](#user-stories)
+- [Website Structure and Features](#Website-Structure-and-Features)
+  + [Wireframes](#wireframes)
+  + [Typography](#typography)
+  + [Website Architecture](#website-architecture)
+  + [Current Feautures](#current-features)
+  + [Future Feautures](#future-features)
+- [Technologies and Libaries Used](#Technologies-and-Libaries-Used)
+- [Testing](#testing)
+  + [Validator Testing](#validtor-testing)
+  + [Browser Compatability](#browser-compatability)
+  + [Device Compatability](#device-compatability)
+  + [Manual Testing](#manual-testing)
+  + [Challenging User Stories](#Challenging-User-Stories)
+  + [User Feedback](#User-Feedback)
+- [Bugs](#bugs)
+  + [Resolved](#resolved)
+- [Credits](#credits)
+  + [Content](#content)
+  + [Media](#media)
 
-Another blue button should appear to click: _Open Browser_.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## User Stories
 
-To log into the Heroku toolbelt CLI:
+The audience of this website will be those who would like to browse and purchase items securley:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+* As a user, I would like to browse the selection of products. 
+* As a user, I would like to add or remove items to and from a basket.
+* As a user, I would like a secure checkout.
+* As a user, I would like to create an account to save my details and view my purchase history. 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## Website Structure and Features
 
-------
+### Wireframes
 
-## Release History
+[View my wireframes in PDF format here.](https://github.com/BMorrell92/BMorrell_Milestone_Project3/blob/main/assets/wireframes/MS3Wireframes.pdf) It should be noted, that the wireframes do not exactly match the final product, however, it does capture the main structure.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Typograhpy
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+The landing page text uses Rubik Pixels which provides a unique grainy effect.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### Website Structure & Features
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+The website consists of 6 pages. Each page has its own function for users to register, log in and access their notes. Page structuring and functionality was structured using the [Materialize Framework](https://materializecss.com/about.html). 
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+- Home Page:
+When first visiting the website, users are greeted with a homepage which introduces the purpose of LogIt:
+<p align="center"><img src="https://github.com/BMorrell92/BMorrell_Milestone_Project3/blob/main/assets/images/home.JPG"></p>
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+- Log In Page:
+From the Log In page returning users can enter their credentials into the form to access their profile:
+<p align="center"><img src="https://github.com/BMorrell92/BMorrell_Milestone_Project3/blob/main/assets/images/log%20in.JPG"></p>
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+- Registration Page:
+From the Registration page new users can enter their desired credentials into the form to create a profile:
+<p align="center"><img src="https://github.com/BMorrell92/BMorrell_Milestone_Project3/blob/main/assets/images/register.JPG"></p>
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+- Profile Page:
+From the the Profile/Notes page users can access, search and delete their notes:
+<p align="center"><img src="https://github.com/BMorrell92/BMorrell_Milestone_Project3/blob/main/assets/images/profile.JPG"></p>
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+- New Notes Page:
+From the New Notes page users can add new notes to thier profile by filling in the new notes form:
+<p align="center"><img src="https://github.com/BMorrell92/BMorrell_Milestone_Project3/blob/main/assets/images/new.JPG"></p>
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+- Edit Notes Page:
+From the Edit Notes page users can add new notes to thier profile by filling in the new notes form.
+<p align="center"><img src="https://github.com/BMorrell92/BMorrell_Milestone_Project3/blob/main/assets/images/edit.JPG"></p>
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## Technologies and Libaries Used
+1. [HTML5](https://www.w3.org/TR/html52/)
+2. [CSS3](https://www.w3.org/Style/CSS/Overview.en.html)
+3. [Javascript](https://www.javascript.com/)
+4. [Materialize framework for structuring](http://getbootstrap.com/)
+5. [Github for Repo creation and managment](https://github.com/)
+6. [Gitpod for file creation and code editing](https://gitpod.io/)
+7. [Figma was used to create Wireframes for the project](https://www.figma.com/)
+8. [Google Chrome's Dev Tools were used while building the project to test responsiveness, functionality and for debugging](https://developer.chrome.com/docs/devtools/)
+9. [The icons used were taken from Font Awesome](https://fontawesome.com/)
+10. [MongoDB to create and manage the database](https://mongodb.com)
+11. [Heroku to deploy the application](https://www.heroku.com/) 
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+## Testing 
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### Validator Testing 
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+- **HTML:**
+  - No errors were returned when passing through the official W3C validator:
+  <p align="center"><img src="https://github.com/BMorrell92/BMorrell_Milestone_Project3/blob/main/assets/images/HTML%20Validator.JPG"></p>
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+  
+- **CSS:**
+  - No errors were found when passing through the official W3C validator: 
+ <p align="center"><img src="https://github.com/BMorrell92/BMorrell_Milestone_Project3/blob/main/assets/images/CSS%20Validator.JPG"></p>
 
-------
 
-## FAQ about the uptime script
+- **Javascript:**
+    - No errors were found when passing through the JSHint Validator:
+ <p align="center"><img src="https://github.com/BMorrell92/BMorrell_Milestone_Project3/blob/main/assets/images/JS%20Validator.JPG"></p>
+ 
+ - **Python:**
+    - No errors were found when passing through the Python Tester
+ <p align="center"><img src="https://github.com/BMorrell92/BMorrell_Milestone_Project3/blob/main/assets/images/Python%20Validator.JPG"></p>
 
-**Why have you added this script?**
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+### Browser Compatability
+The website has been tested on the following browsers:
 
-**How will this affect me?**
+- Chrome
+- Edge/IE
+- Firefox
+- Opera
+- Safari
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+The wesbite and all it's functionalities work as intended on all broswers. 
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+### Device Compatability
+By using Google Chrome's Dev Tool, compatability was checked on the following devices:
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+- IPhone SE
+- IPhone XR
+- IPhone 12 Pro
+- Pixel 5
+- Samsung Galaxy S8+
+- Samsung Galaxy Ultra S20 Ultra
+- Surface Pro 7
+- IPad
+- IPad Pro
 
-**So….?**
+ The website was found to be responsive on all devices.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+### Manual Testing 
 
-**Can I opt out?**
+- User authentication was tested and confirmed to be working. The following elements were tested:
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+  - Successful registration.  
+  - Failed registration if username exists.
+  - Successful Login.
+  - Unsuccesful login if username does not exist.
+  - Unsuccesful login if password incorrect.
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
 
-**Anything more?**
+- The following notes managment functionalities were tested and confirmed to be working:
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+  - Notes are saved and retreived to profile page.  
+  - Notes can be created, updated and deleted.
+  
+### Challenging User Stories 
 
----
+- *"As a user, I would like to create and categorise my notes."* - **The user can add notes to their account and assign a selection of four categories to those notes**
+- *"As a user, I would like to access my notes on demand."* - **The user can access their notes at any time by logging into their account**
+- *"As a user, I would like to update my notes."* - **The user can edit or delete their notes**
+- *"As a user, I would like my notes to be secure."* - **The users notes are secured in their own account**
 
-Happy coding!
+### User Feedback
+
+I asked a small group of friends and colleagues to test the application. Any criticisms will be considiered for future developments. The Feedback was as follows:
+
+- *"Easy to use and good for simple notes. However, it's a bit too simple if you want to start getting a bit more complex with your notes"*
+- *"Slightly 90's looking, but it does a good job, and I might even start using it myself!"* 
+- *"Good work! Only thing i'd suggest is a custom field for the categories."* 
+
+
+## Bugs
+
+### Resolved
+- **HTML Validation:**
+    - When I first passed the website through the html validator it was returning the following errors:
+    <p align="center"><img src="https://github.com/BMorrell92/BMorrell_Milestone_Project3/blob/main/assets/images/HTML%20Error.JPG"></p>
+    To fix this I deleted the divs that were nesting the li elements.
+
+- **App Methods:**
+  - Whilst following the Code Institute Task Manager mini project I noticed some of the methods they were using were not working in my case. Specifically, the delete funtion used the "remove" method to delete an item from the database on the tutorial, but the "delete_one" method worked for me. Furthermore, the edit funtion used the "update" method to update items on the database on the tutorial, but the "update_retryable" worked for me. 
+
+## Credits 
+
+I would like to credit Code Institute for providing easy-to-follow content and all the necessary source code from their tutorials. Much of the source code from the Code Institutes Task Manager mini project has been repurposed for the benefit of this deliverable.   
+
+### Content 
+
+- The icons used were taken from [Font Awesome](https://fontawesome.com/)
+
+
+
