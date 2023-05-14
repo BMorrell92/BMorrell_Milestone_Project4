@@ -53,6 +53,15 @@
   border-color: #1e7e34;
 }
 
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
 /* Style for the footer */
 footer {
   background-color: lightslategray;
