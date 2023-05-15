@@ -71,9 +71,20 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Contact</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'view_bag' %}">Basket <span id="basket-total" class="badge badge-primary">£0</span> <span id="basket-count" class="badge badge-secondary">0</span></a>
-            </li>
+            <li class="list-inline-item">
+              <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
+                  <div class="text-center">
+                      <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                      <p class="my-0">
+                          {% if grand_total %}
+                              ${{ grand_total|floatformat:2 }}
+                          {% else %}
+                              $0.00
+                          {% endif %}
+                      </p>
+                  </div>
+              </a>
+          </li>
           </ul>
         </div>
       </nav>
@@ -84,25 +95,9 @@
     {% endblock %}
 
     {% block content %}
-
     {% endblock %}
 
     {% block postloadjs %}
-    <script>
-      // Example JavaScript code to update the basket total and count dynamically
-      // Replace this code with your actual logic to fetch the data from the server
-    
-      // Sample data
-      const basketTotal = 50.99;
-      const basketCount = 5;
-    
-      // Update the total price and count in the navbar
-      const basketTotalElement = document.getElementById("basket-total");
-      const basketCountElement = document.getElementById("basket-count");
-    
-      basketTotalElement.textContent = `$${basketTotal.toFixed(2)}`;
-      basketCountElement.textContent = basketCount;
-    </script>
     {% endblock %}
   </body>
 <!-- Footer Structure -->
