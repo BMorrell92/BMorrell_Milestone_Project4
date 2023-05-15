@@ -39,25 +39,46 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#">GeoPotz</a>
+        <a class="navbar-brand" href="{% url 'home' %}">GeoPotz</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link" href="{% url 'home' %}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Shop</a>
+              <a class="nav-link" href="{% url 'products' %}">Shop</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                My Account
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                {% if request.user.is_authenticated %}
+                  {% if request.user.is_superuser %}
+                    <a href="" class="dropdown-item">Product Management</a>
+                  {% endif %}
+                  <a href="" class="dropdown-item">My Profile</a>
+                  <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                {% else %}
+                  <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                  <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                {% endif %}
+              </div>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'view_bag' %}">Basket <span id="basket-total" class="badge badge-primary">£0</span> <span id="basket-count" class="badge badge-secondary">0</span></a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
+    
 
     {% block page_header %}
     {% endblock %}
@@ -67,9 +88,22 @@
     {% endblock %}
 
     {% block postloadjs %}
+    <script>
+      // Example JavaScript code to update the basket total and count dynamically
+      // Replace this code with your actual logic to fetch the data from the server
+    
+      // Sample data
+      const basketTotal = 50.99;
+      const basketCount = 5;
+    
+      // Update the total price and count in the navbar
+      const basketTotalElement = document.getElementById("basket-total");
+      const basketCountElement = document.getElementById("basket-count");
+    
+      basketTotalElement.textContent = `$${basketTotal.toFixed(2)}`;
+      basketCountElement.textContent = basketCount;
+    </script>
     {% endblock %}
-
-
   </body>
 <!-- Footer Structure -->
 
