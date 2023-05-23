@@ -76,7 +76,7 @@
 
 ### Typograhpy
 
-The landing page text uses Rubik Pixels which provides a unique grainy effect.
+In the GeoPotz Online Store, we have chosen to use the Rubik Pixels font for the home page to create a visually appealing and engaging experience for our visitors. Rubik Pixels is a unique and eye-catching font that combines elements of the Rubik font family with pixelated and geometric design features. The pixelated aesthetic adds a touch of nostalgia and a modern twist, creating a visually striking and memorable first impression.
 
 ### Store Features
 

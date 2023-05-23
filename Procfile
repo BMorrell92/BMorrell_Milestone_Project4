@@ -1,0 +1,1 @@
+web: gunicorn geopotz.wsgi:application
