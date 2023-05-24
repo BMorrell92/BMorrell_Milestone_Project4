@@ -1,1 +1,1 @@
-web: gunicorn geopotz.wsgi:application
+web: gunicorn GeoPotz.wsgi:application
