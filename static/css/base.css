@@ -262,11 +262,26 @@ footer {
   display: inline;
 }
 
-.social-networks i{
-  font-size: 160%;
-  margin: 1%;
-  padding: 1% 5% 1% 5%;
-  color: black;
+.footer-text {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+
+.social-networks li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-networks a {
+  color: #555;
+  font-size: 20px;
+}
+
+.social-networks a:hover {
+  color: #000;
 }
 
 /* Allauth form formatting */
