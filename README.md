@@ -62,10 +62,7 @@
 - As a store owner, I want to have a secure and reliable payment gateway integration to process customer transactions and ensure smooth and secure online payments.
 - As a store owner, I want to have an admin dashboard or backend system to manage orders, view customer details, and process shipments efficiently.
 - As a store owner, I want to generate reports on sales, inventory levels, and customer analytics to gain insights into the business performance and make informed decisions.
-- As a store owner, I want to implement effective marketing strategies, such as promotional campaigns, discounts, and customer loyalty programs, to attract new customers and retain existing ones.
-- As a store owner, I want to ensure the website is optimized for search engines (SEO) to improve its visibility and attract organic traffic.
 - As a store owner, I want to provide excellent customer support by promptly addressing customer inquiries, resolving issues, and maintaining a positive reputation for the store.
-- As a store owner, I want to regularly update the website content, including product descriptions, images, and blog posts, to keep the online store fresh and engaging for customers.
 - As a store owner, I want to monitor website performance, including page load times and uptime, to ensure a fast and reliable shopping experience for customers.
 
 ## Website Structure and Features
@@ -215,25 +212,40 @@ I conducted accessibility testing to ensure our online store is usable and acces
 ### Challenging User Stories 
 
 - *"As a customer, I want to easily navigate through different categories of plant pots, so I can find the ones that match my preferences."* - **Although the infrastructure has been added for this, the current listings are not split out into categories. Future additions will involve more listing split out into different caetgories.**
+
 - *"As a customer, I want to view detailed product information and images for each plant pot, so I can make an informed decision before purchasing."* - **The user can click onto a product to be redirect to a page detaling all the information of that product.**
+
 - *"As a customer, I want to add plant pots to my basket and see the updated total price, so I can keep track of my selected items."* - **The user is able to add products to a basket which lists the added items and net price**
+
 - *"As a customer, I want the option to create an account and securely store my shipping and payment information for future purchases, so I can have a convenient checkout process."*  **The user is able to create an account and save their personal deatils for a convenient checkout process. Furthermore, the customer is able to check their order history from their account**
-- *"As a customer, I want to be able to search for specific plant pots or filter them based on criteria like price, shape, or color, so I can quickly find what I'm looking for"*  **The user is able to use the filter on the shop page by various criteria.**
+
+- *"As a customer, I want to be able to search for specific plant pots or filter them based on criteria like price, shape, or color, so I can quickly find what I'm looking for"*  **The user is able to filter on the shop page by various criteria.**
+
 - *"As a customer, I want to read reviews and ratings from other buyers, so I can gauge the quality and satisfaction level of the product."*  **Currently, there is only a rudimental rating associated with the listings. Future features will include an advanced review function to allow verified customers to leave a review.**
+
 - *"As a customer, I want to easily proceed through the checkout process, with clear steps for providing shipping details, selecting a payment method, and reviewing my order."*  **Through the Stripe Card Payments API, customers are easily able to go through a secure checkout process.**
+
 - *"As a customer, I want to receive email notifications with order confirmation and shipment tracking information, so I can stay updated on the status of my purchase."*  **The customer receives an automated email and tracking number with each purchase**
+
 - *"As a customer, I want to have a user-friendly and responsive website that works well on both desktop and mobile devices, for a seamless shopping experience."*  **The website is responsive and user friendly and small, medium and large devices**
-- *"As a customer, I want to contact customer support easily, either through a live chat feature or a contact form, to get assistance or ask questions about products or orders."*  **This feature does not currently exist, but will be added to the future features list**
 
+- *"As a customer, I want to contact customer support easily, either through a live chat feature or a contact form, to get assistance or ask questions about products or orders."*  **This feature does not currently exist, but is part of the future features list**
 
+### Challenging Store Owner Stories 
 
+- *"As a store owner, I want to easily manage and update the inventory of plant pots, including adding new products, modifying existing ones, and removing discontinued items."* - **The store owner can manage listings from the website itself or from the Django administrator.**
 
+- *"As a store owner, I want to track the sales and revenue generated by the online store, including the number of orders, average order value, and popular products."* - **This feature does not currently exist, but is part of the future features list.**
 
+- *"As a store owner, I want to have a secure and reliable payment gateway integration to process customer transactions and ensure smooth and secure online payments."* - **Through the Stripe Card Payments API, customers are easily able to go through a secure checkout process.**
 
+- *"As a store owner, I want to have an admin dashboard or backend system to manage orders, view customer details, and process shipments efficiently."* - **The Django administartor is the backend system in use, but it would need further configuration to handle large amounts of orders effciently.**
 
+- *"As a store owner, I want to generate reports on sales, inventory levels, and customer analytics to gain insights into the business performance and make informed decisions."* - **This feature does not currently exist, but is part of the future features list.**
 
+- *"As a store owner, I want to provide excellent customer support by promptly addressing customer inquiries, resolving issues, and maintaining a positive reputation for the store."* - **This feature does not currently exist, but the future features list invovles building an adequete customer support structure.**
 
-
+- *"As a store owner, I want to monitor website performance, including page load times and uptime, to ensure a fast and reliable shopping experience for customers."* - **This feature does not currently exist, but is part of the future features list.**
 
 ### User Feedback
 
