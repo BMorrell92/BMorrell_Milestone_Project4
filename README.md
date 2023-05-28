@@ -11,11 +11,11 @@
 
 ## Live Project 
 
-[View the live project here.](https://notes-ben-ms3.herokuapp.com/)
+[View the live project here.](https://geopotz.herokuapp.com/)
 
 ## Repository
 
-[Find the project repository here](https://github.com/BMorrell92/BMorrell_Milestone_Project3)
+[Find the project repository here](https://github.com/BMorrell92/BMorrell_Milestone_Project4)
 
 # Table of Contents  
 
@@ -48,7 +48,7 @@
 - As a customer, I want to view detailed product information and images for each plant pot, so I can make an informed decision before purchasing.
 - As a customer, I want to add plant pots to my basket and see the updated total price, so I can keep track of my selected items.
 - As a customer, I want the option to create an account and securely store my shipping and payment information for future purchases, so I can have a convenient checkout process.
-- As a customer, I want to be able to search for specific plant pots or filter them based on criteria like size, shape, or color, so I can quickly find what I'm looking for.
+- As a customer, I want to be able to search for specific plant pots or filter them based on criteria like price, shape, or color, so I can quickly find what I'm looking for.
 - As a customer, I want to read reviews and ratings from other buyers, so I can gauge the quality and satisfaction level of the product.
 - As a customer, I want to easily proceed through the checkout process, with clear steps for providing shipping details, selecting a payment method, and reviewing my order.
 - As a customer, I want to receive email notifications with order confirmation and shipment tracking information, so I can stay updated on the status of my purchase.
@@ -72,7 +72,7 @@
 
 ### Wireframes
 
-[View my wireframes in PDF format here.](https://github.com/BMorrell92/BMorrell_Milestone_Project3/blob/main/assets/wireframes/MS3Wireframes.pdf) It should be noted, that the wireframes do not exactly match the final product, however, it does capture the main structure.
+[View my wireframes in PDF format here.](https://github.com/BMorrell92/BMorrell_Milestone_Project4/blob/main/media/MSP4%20Wireframes.pdf) It should be noted, that the wireframes do not exactly match the final product, however, it does capture the main structure.
 
 ### Typograhpy
 
@@ -214,10 +214,26 @@ I conducted accessibility testing to ensure our online store is usable and acces
   
 ### Challenging User Stories 
 
-- *"As a user, I would like to create and categorise my notes."* - **The user can add notes to their account and assign a selection of four categories to those notes**
-- *"As a user, I would like to access my notes on demand."* - **The user can access their notes at any time by logging into their account**
-- *"As a user, I would like to update my notes."* - **The user can edit or delete their notes**
-- *"As a user, I would like my notes to be secure."* - **The users notes are secured in their own account**
+- *"As a customer, I want to easily navigate through different categories of plant pots, so I can find the ones that match my preferences."* - **Although the infrastructure has been added for this, the current listings are not split out into categories. Future additions will involve more listing split out into different caetgories.**
+- *"As a customer, I want to view detailed product information and images for each plant pot, so I can make an informed decision before purchasing."* - **The user can click onto a product to be redirect to a page detaling all the information of that product.**
+- *"As a customer, I want to add plant pots to my basket and see the updated total price, so I can keep track of my selected items."* - **The user is able to add products to a basket which lists the added items and net price**
+- *"As a customer, I want the option to create an account and securely store my shipping and payment information for future purchases, so I can have a convenient checkout process."*  **The user is able to create an account and save their personal deatils for a convenient checkout process. Furthermore, the customer is able to check their order history from their account**
+- *"As a customer, I want to be able to search for specific plant pots or filter them based on criteria like price, shape, or color, so I can quickly find what I'm looking for"*  **The user is able to use the filter on the shop page by various criteria.**
+- *"As a customer, I want to read reviews and ratings from other buyers, so I can gauge the quality and satisfaction level of the product."*  **Currently, there is only a rudimental rating associated with the listings. Future features will include an advanced review function to allow verified customers to leave a review.**
+- *"As a customer, I want to easily proceed through the checkout process, with clear steps for providing shipping details, selecting a payment method, and reviewing my order."*  **Through the Stripe Card Payments API, customers are easily able to go through a secure checkout process.**
+- *"As a customer, I want to receive email notifications with order confirmation and shipment tracking information, so I can stay updated on the status of my purchase."*  **The customer receives an automated email and tracking number with each purchase**
+- *"As a customer, I want to have a user-friendly and responsive website that works well on both desktop and mobile devices, for a seamless shopping experience."*  **The website is responsive and user friendly and small, medium and large devices**
+- *"As a customer, I want to contact customer support easily, either through a live chat feature or a contact form, to get assistance or ask questions about products or orders."*  **This feature does not currently exist, but will be added to the future features list**
+
+
+
+
+
+
+
+
+
+
 
 ### User Feedback
 
