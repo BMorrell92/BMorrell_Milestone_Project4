@@ -21,14 +21,15 @@
 
 ## Contents
 - [User Stories](#user-stories)
+- [Store Owner Stories](#store-owner-stories)
 - [Website Structure and Features](#Website-Structure-and-Features)
   + [Wireframes](#wireframes)
   + [Typography](#typography)
-  + [Website Architecture](#website-architecture)
-  + [Current Feautures](#current-features)
+  + [Website Features](#website-features)
   + [Future Feautures](#future-features)
 - [Technologies and Libaries Used](#Technologies-and-Libaries-Used)
 - [Testing](#testing)
+  + [Validator Testing](#validtor-testing)
   + [Validator Testing](#validtor-testing)
   + [Browser Compatability](#browser-compatability)
   + [Device Compatability](#device-compatability)
@@ -77,10 +78,6 @@ In the GeoPotz Online Store, we have chosen to use the Rubik Pixels font for the
 
 ### Store Features
 
-- Wide Selection of Uniquely Shaped Plant Pots: Explore our extensive collection of plant pots crafted from 3D-printed molds, featuring a variety of eye-catching and innovative designs.
-
-- Intuitive Navigation: Easily browse through different categories and subcategories of plant pots, allowing you to find the perfect match for your indoor or outdoor plants.
-
 - Detailed Product Information: Each plant pot comes with comprehensive details, including dimensions, materials, and care instructions, helping you make informed purchasing decisions.
 
 - Interactive Product Images: Get a closer look at each plant pot with high-quality, zoomable images that showcase the intricate details and unique features of the designs.
@@ -94,7 +91,7 @@ Search and Filtering: Easily find specific plant pots or narrow down your option
 Order Tracking and Notifications: Stay updated on the status of your orders with email notifications, including order confirmation and shipment tracking information.
 Customer Support: Reach out to our friendly and knowledgeable customer support team for assistance, inquiries, or any questions you may have about our products or the ordering process.
 
-### Future Features
+### Future Features & Additions
 
 - Customer Reviews: Read reviews and ratings from other buyers to gain insights into the quality, durability, and overall satisfaction of the plant pots.
 Responsive and User-Friendly Design: Enjoy a seamless shopping experience across different devices, thanks to a responsive and intuitive website design that adapts to various screen sizes.
@@ -108,7 +105,7 @@ Responsive and User-Friendly Design: Enjoy a seamless shopping experience across
 1. [HTML5](https://www.w3.org/TR/html52/)
 2. [CSS3](https://www.w3.org/Style/CSS/Overview.en.html)
 3. [Javascript](https://www.javascript.com/)
-4. [Materialize framework for structuring](http://getbootstrap.com/)
+4. [Bootstrap framework for structuring](http://getbootstrap.com/)
 5. [Github for Repo creation and managment](https://github.com/)
 6. [Gitpod for file creation and code editing](https://gitpod.io/)
 7. [Figma was used to create Wireframes for the project](https://www.figma.com/)
@@ -116,16 +113,61 @@ Responsive and User-Friendly Design: Enjoy a seamless shopping experience across
 9. [The icons used were taken from Font Awesome](https://fontawesome.com/)
 10. [MongoDB to create and manage the database](https://mongodb.com)
 11. [Heroku to deploy the application](https://www.heroku.com/) 
+12. [The Django framework has been used to create the app](https://www.djangoproject.com/)
 
 ## Testing Carried Out
 
-### Unit Testing 
+### Unit & Intergartion Testing 
 
-I have implemented unit tests to verify the functionality of individual components and modules within our application. This helps ensure that each part of the system performs as expected.
+I have implemented unit tests to verify the functionality of individual components and modules within the application. The Django framework provides several components that can be unit tested to ensure the reliability and correctness of the web store. Furthermore, I conducted integration tests to validate the interactions and compatibility between different components, such as the shopping cart, payment gateway, and user authentication system. This ensures smooth communication and seamless integration of various features.
 
-### Integration Testing
+Here are some of the tests that have been carried out:
 
-I conducted integration tests to validate the interactions and compatibility between different components, such as the shopping cart, payment gateway, and user authentication system. This ensures smooth communication and seamless integration of various features.
+- **Models:**
+  I Unit tested the models to verify that the data is stored and retrieved correctly. My test cases included:
+
+  - Test the validity of fields, such as checking if required fields are properly enforced.
+  - Test relationships between models, ensuring that foreign key and many-to-many relationships are working as expected.
+  - Test custom methods or properties defined in the models to verify their functionality.
+
+- **Views:**
+  I unit tested the views to verify the functionality such as handling different types of requests, handling form submissions, and rendering the appropriate templates. My test cases included:
+
+  - Test the response status codes returned by views for different types of requests (GET, POST, etc.)..
+  - Test the functionality of form handling, including form validation and successful form submission.
+  - Test the rendering of correct templates based on the requested URLs or view logic.
+
+- **Forms:**
+  I unit tested the forms to verify the validation rules, error handling, and data cleaning functions. My test cases included:
+
+  - Test form validation by providing different sets of input data and verifying the validation errors.
+  - Test form cleaning functions to ensure that input data is properly cleaned and formatted.
+  - Test form submission and data processing, checking if the form saves data correctly or triggers any necessary actions.
+
+- **Templates:**
+  I unit tested the templates to verify the rendering and functionality of templates in conjunction with views. My test cases included: 
+
+  - Test the rendering of templates and check if the expected content is present.
+  - Test the rendering of dynamic data passed from views to templates.
+  - Test the functionality of template tags and filters used in the templates.
+
+- **Django Allauth:**
+  I tested Django Allauth to verify user authentication and account management. My test cases included: 
+
+  - The registration form validates user input correctly.
+  - User registration triggers the expected email confirmation process, if enabled.
+  - User accounts are created in the database with the correct information.
+  - Registered users can log in using their credentials..
+  - Authentication fails for invalid login attempts (e.g., incorrect password or non-existent user).
+  - Authenticated users can log out, terminating their session.
+
+- **Stripe Payment Gateway:**
+  My test cases for the Stripe paytment gateway included: 
+
+  - Successful Payment: Verify successful processing of valid payment details.
+  - Invalid Card Number: Verify error message when an invalid card number is provided.
+  - Expired Card: Verify error message when an expired card is used for payment. 
+
 
 ### Cross-Browser and Cross-Device Testing
 
@@ -160,17 +202,15 @@ I conducted integration tests to validate the interactions and compatibility bet
 
 ### User Acceptance Testing
 
- I involved real users to perform user acceptance testing (UAT) and gather feedback on their experience. This helps us identify any usability issues, gather user insights, and make improvements based on actual user interactions.
+ I involved real users to perform user acceptance testing (UAT) and gather feedback on their experience. This helps us identify any usability issues, gather user insights, and make improvements based on actual user interactions. The Feedback was as follows:
 
-### Accessibility Testing 
+- *"Good work! Pretty much what you'd expect from an online store."*
+- *"Decent effort. Could do with some more products though."* 
+- *"Good job. My main gripe is with the performance. Loading time takes away from the user experience"* 
+
+### Accessibility & Performance Testing 
 
 I conducted accessibility testing to ensure our online store is usable and accessible to individuals with disabilities. We adhere to web accessibility guidelines and strive to provide an inclusive experience for all users.
-
-## Planned Testing 
-
-- Security Testing: We conduct regular security audits and vulnerability assessments to ensure the safety of customer data and protect against potential security threats. We follow best practices for secure coding, data encryption, and secure communication protocols.
-
-- Performance Testing: We continuously monitor and test the performance of our online store to ensure fast loading times, optimal server response, and scalability. This helps deliver a smooth and efficient shopping experience even during peak traffic periods.
 
 ### Validator Testing 
 
@@ -193,22 +233,6 @@ I conducted accessibility testing to ensure our online store is usable and acces
  <p align="center"><img src="https://github.com/BMorrell92/BMorrell_Milestone_Project3/blob/main/assets/images/Python%20Validator.JPG"></p>
 
 
-### Manual Testing 
-
-- User authentication was tested and confirmed to be working. The following elements were tested:
-
-  - Successful registration.  
-  - Failed registration if username exists.
-  - Successful Login.
-  - Unsuccesful login if username does not exist.
-  - Unsuccesful login if password incorrect.
-
-
-- The following notes managment functionalities were tested and confirmed to be working:
-
-  - Notes are saved and retreived to profile page.  
-  - Notes can be created, updated and deleted.
-  
 ### Challenging User Stories 
 
 - *"As a customer, I want to easily navigate through different categories of plant pots, so I can find the ones that match my preferences."* - **Although the infrastructure has been added for this, the current listings are not split out into categories. Future additions will involve more listing split out into different caetgories.**
@@ -256,6 +280,13 @@ I asked a small group of friends and colleagues to test the application. Any cri
 - *"Good work! Only thing i'd suggest is a custom field for the categories."* 
 
 
+## Future Testing 
+
+- Security Testing: Before this being rolled out as a functional online store, vulnerability assessments will need to be carried out to ensure the safety of customer data and protect against potential security threats. 
+
+- Performance Testing: Further testing and investigation will be required on the performance of the online store to ensure fast loading times, optimal server response, and scalability. This will help deliver a smooth and efficient shopping experience.
+
+
 ## Bugs
 
 ### Resolved
@@ -273,6 +304,8 @@ I would like to credit Code Institute for providing easy-to-follow content and a
 
 ### Content 
 
+- The icons used were taken from [Font Awesome](https://fontawesome.com/)
+- The icons used were taken from [Font Awesome](https://fontawesome.com/)
 - The icons used were taken from [Font Awesome](https://fontawesome.com/)
 
 
