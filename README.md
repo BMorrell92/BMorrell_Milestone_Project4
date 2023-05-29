@@ -212,7 +212,7 @@ Here are some of the tests that have been carried out:
 
 ### Lighthouse Reports 
 
-I conducted accessibility testing to ensure our online store is usable and accessible to individuals with disabilities. We adhere to web accessibility guidelines and strive to provide an inclusive experience for all users.
+I conducted accessibility and performance testing to ensure our online store is usable and accessible. This was done using the Lighthouse reporting feature in Chrome Developer Tools. In general, the website was assessed to perform quite poorly, but score well on accessibility. Future fixes will have to involve improving the performance of the website.
 
 ### Validator Testing 
 
