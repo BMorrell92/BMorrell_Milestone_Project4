@@ -2,12 +2,26 @@ html {
   height: 100%;
 }
 
+/* Style for the jumbotron */
+
 .jumbotron {
   background: url('https://geopotz.s3.eu-west-2.amazonaws.com/static/media/background_image2.jpg') no-repeat center center fixed;
   background-size: cover;
   height: calc(100vh - 164px);
-  color: #555;
+  color: black;
   font-family: 'Rubik Pixels';
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.display-4 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
   font-weight: bold;
 }
 
@@ -48,7 +62,8 @@ footer {
 .footer-text {
   text-align: center;
   font-size: 14px;
-  color: #777;
+  font-weight: bold;
+  color: black;
   margin-bottom: 10px;
 }
 
@@ -59,12 +74,13 @@ footer {
 }
 
 .social-networks a {
-  color: #555;
+  color: black;
   font-size: 20px;
+  font-weight: bold;
 }
 
 .social-networks a:hover {
-  color: #000;
+  color: blue;
 }
 
 /* from Bulma */
@@ -342,6 +358,7 @@ color: #17a2b8; /* text-info */
 @media (max-width: 991px) {
   .header-container {
       padding-top: 116px;
+      padding-bottom: 300px;
   }
 
   body {
