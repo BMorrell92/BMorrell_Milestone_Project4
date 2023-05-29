@@ -33,7 +33,7 @@
 - [Testing Carried Out](#testing-carried-out)
   + [Unit & Intergration Testing](#unit-&-intergration-testing)
   + [Cross Browser & Cross Device Testing](#Cross-Browser-&-Cross-Device-Testing)
-  + [User Acceptance Testing][user-acceptance-testing]
+  + [User Acceptance Testing][#user-acceptance-testing]
   + [Validator Testing](#validtor-testing)
   + [Validator Testing](#validtor-testing)
   + [Lighthouse Reports](#lighthouse-reports)
