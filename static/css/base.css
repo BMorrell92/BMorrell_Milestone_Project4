@@ -2,7 +2,7 @@ html {
   height: 100%;
 }
 
-body {
+.jumbotron {
   background: url('https://geopotz.s3.eu-west-2.amazonaws.com/static/media/background_image2.jpg') no-repeat center center fixed;
   background-size: cover;
   height: calc(100vh - 164px);
