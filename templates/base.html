@@ -14,12 +14,15 @@
     {% endblock %}
 
     {% block corecss %}
+        <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- Google Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
         <link href="https://fonts.googleapis.com/css2?family=Freehand&family=Rubik+Pixels&display=swap" rel="stylesheet">
+        <!-- Custom CSS -->
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
         <style>
-        .jumbotron {
+          .jumbotron {
             background-image: url('https://geopotz.s3.eu-west-2.amazonaws.com/static/media/background_image2.jpg');
             background-repeat: no-repeat;
             background-size: 100%;
@@ -31,9 +34,13 @@
     {% endblock %}
 
     {% block corejs %}
+        <!-- Font Awesome -->
         <script src="https://kit.fontawesome.com/90ad587b2a.js" crossorigin="anonymous"></script>
+        <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <!-- Popper.js -->
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <!-- Bootstrap JS -->
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <!-- Stripe -->
         <script src="https://js.stripe.com/v3/"></script>
@@ -42,16 +49,19 @@
     {% block extra_js %}
     {% endblock %}
 
-  <title>GeoPotz - Unique Plant Pots {% block extra_title %}{% endblock %}</title>
+    <title>GeoPotz - Unique Plant Pots {% block extra_title %}{% endblock %}</title>
   </head>
 
   <body>
+    <!-- Header -->
     <header>
       <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="{% url 'home' %}">GeoPotz</a>
+        <!-- Navbar Toggler -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <!-- Navbar Links -->
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
@@ -78,6 +88,7 @@
               </div>
             </li>
             <li class="list-inline-item">
+              <!-- Shopping Bag Link -->
               <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
                   <div class="text-center">
                       <div><i class="fas fa-shopping-bag fa-lg"></i></div>
@@ -96,6 +107,7 @@
       </nav>
     </header>
 
+    <!-- Messages -->
     {% if messages %}
         <div class="message-container">
             {% for message in messages %}
@@ -126,8 +138,7 @@
     </script>
     {% endblock %}
 
-    <!-- Footer Structure -->
-
+    <!-- Footer -->
     <footer class="container-fluid">
       <p class="footer-text">Stay connected with us:</p>
       <ul class="social-networks">
