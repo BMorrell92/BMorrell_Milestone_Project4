@@ -9,6 +9,8 @@
 
 * It is essential to highlight that this prototype might lack some advanced features, customisation options, and additional functionalities that would be incorporated into a final version. However, it does staisfy the requirments of Milestone Project 4. Please note, that any personal information or financial transactions used during the prototype testing are not stored or processed in a live environment. The purpose of this prototype is to provide a demonstration of the envisioned online store's core structure and features.
 
+ <p align="center"><img src="https://github.com/BMorrell92/BMorrell_Milestone_Project4/blob/main/media/Device%20Mockup.JPG"></p>
+
 ## Live Project 
 
 [View the live project here.](https://geopotz.herokuapp.com/)
@@ -27,20 +29,22 @@
   + [Typography](#typography)
   + [Website Features](#website-features)
   + [Future Feautures](#future-features)
-- [Technologies and Libaries Used](#Technologies-and-Libaries-Used)
-- [Testing](#testing)
+- [Technologies and Libaries Used](#Technologies-&-Libaries-Used)
+- [Testing Carried Out](#testing-carried-out)
+  + [Unit & Intergration Testing](#unit-&-intergration-testing)
+  + [Cross Browser & Cross Device Testing](#Cross-Browser-&-Cross-Device-Testing)
+  + [User Acceptance Testing][user-acceptance-testing]
   + [Validator Testing](#validtor-testing)
   + [Validator Testing](#validtor-testing)
-  + [Browser Compatability](#browser-compatability)
-  + [Device Compatability](#device-compatability)
-  + [Manual Testing](#manual-testing)
+  + [Lighthouse Reports](#lighthouse-reports)
   + [Challenging User Stories](#Challenging-User-Stories)
-  + [User Feedback](#User-Feedback)
+  + [Challenging Store Owner Stories](#challenging-store-owner-stories)
+- [Future Testing](#future-testing)
 - [Bugs](#bugs)
-  + [Resolved](#resolved)
+  + [Unresolved](#unresolved)
 - [Credits](#credits)
   + [Content](#content)
-  + [Media](#media)
+  
 
 
 ## User Stories
@@ -66,7 +70,7 @@
 - As a store owner, I want to provide excellent customer support by promptly addressing customer inquiries, resolving issues, and maintaining a positive reputation for the store.
 - As a store owner, I want to monitor website performance, including page load times and uptime, to ensure a fast and reliable shopping experience for customers.
 
-## Website Structure and Features
+## Website Structure & Features
 
 ### Wireframes
 
@@ -171,7 +175,7 @@ Here are some of the tests that have been carried out:
   - Expired Card: Verify error message when an expired card is used for payment. 
 
 
-### Cross-Browser and Cross-Device Testing
+### Cross-Browser & Cross-Device Testing
 
  The online store has been tested on a wide range of browsers and devices to ensure compatibility and responsiveness. We strive to provide a consistent experience across different platforms, including desktops, tablets, and mobile devices.
 
@@ -212,27 +216,21 @@ Here are some of the tests that have been carried out:
 
 ### Lighthouse Reports 
 
-I conducted accessibility and performance testing to ensure our online store is usable and accessible. This was done using the Lighthouse reporting feature in Chrome Developer Tools. In general, the website was assessed to perform quite poorly, but score well on accessibility. Future fixes will have to involve improving the performance of the website.
+I conducted accessibility and performance testing to ensure the online store is usable and accessible. This was done using the Lighthouse reporting feature in Chrome Developer Tools. In general, the website was assessed to perform poorly, but scored well on accessibility. Future fixes will have to involve improving the performance of the website. The performance reports on the main pages can be seen below:
+
+ <p align="center"><img src="https://github.com/BMorrell92/BMorrell_Milestone_Project4/blob/main/media/Landing%20page%20lighthouse.JPG"></p>
+ <p align="center"><img src="https://github.com/BMorrell92/BMorrell_Milestone_Project4/blob/main/media/Shopping%20page%20lighthouse.JPG"></p>
 
 ### Validator Testing 
 
 - **HTML:**
   - No errors were returned when passing through the official W3C validator:
-  <p align="center"><img src=""></p>
+  <p align="center"><img src="https://github.com/BMorrell92/BMorrell_Milestone_Project4/blob/main/media/HTML%20Validator.JPG"></p>
 
   
 - **CSS:**
   - No errors were found when passing through the official W3C validator: 
- <p align="center"><img src=""></p>
-
-
-- **Javascript:**
-    - No errors were found when passing through the JSHint Validator:
- <p align="center"><img src="https://github.com/BMorrell92/BMorrell_Milestone_Project3/blob/main/assets/images/JS%20Validator.JPG"></p>
- 
- - **Python:**
-    - No errors were found when passing through the Python Tester
- <p align="center"><img src="https://github.com/BMorrell92/BMorrell_Milestone_Project3/blob/main/assets/images/Python%20Validator.JPG"></p>
+ <p align="center"><img src="https://github.com/BMorrell92/BMorrell_Milestone_Project4/blob/main/media/CSS%20Validator.JPG"></p>
 
 
 ### Challenging User Stories 
@@ -257,6 +255,7 @@ I conducted accessibility and performance testing to ensure our online store is 
 
 - *"As a customer, I want to contact customer support easily, either through a live chat feature or a contact form, to get assistance or ask questions about products or orders."*  **This feature does not currently exist, but is part of the future features list**
 
+
 ### Challenging Store Owner Stories 
 
 - *"As a store owner, I want to easily manage and update the inventory of plant pots, including adding new products, modifying existing ones, and removing discontinued items."* - **The store owner can manage listings from the website itself or from the Django administrator.**
@@ -273,14 +272,6 @@ I conducted accessibility and performance testing to ensure our online store is 
 
 - *"As a store owner, I want to monitor website performance, including page load times and uptime, to ensure a fast and reliable shopping experience for customers."* - **This feature does not currently exist, but is part of the future features list.**
 
-### User Feedback
-
-I asked a small group of friends and colleagues to test the application. Any criticisms will be considiered for future developments. The Feedback was as follows:
-
-- *"Easy to use and good for simple notes. However, it's a bit too simple if you want to start getting a bit more complex with your notes"*
-- *"Slightly 90's looking, but it does a good job, and I might even start using it myself!"* 
-- *"Good work! Only thing i'd suggest is a custom field for the categories."* 
-
 
 ## Future Testing 
 
@@ -290,16 +281,17 @@ I asked a small group of friends and colleagues to test the application. Any cri
 
 - Automated Emails: Once automated emails have been enabled, their functionality will be tested.
 
+
 ## Bugs
 
-### Resolved
-- **HTML Validation:**
-    - When I first passed the website through the html validator it was returning the following errors:
-    <p align="center"><img src=""></p>
-    To fix this I deleted the divs that were nesting the li elements.
+### Unresolved
 
-- **App Methods:**
-  - Whilst following the Code Institute Task Manager mini project I noticed some of the methods they were using were not working in my case. Specifically, the delete funtion used the "remove" method to delete an item from the database on the tutorial, but the "delete_one" method worked for me. Furthermore, the edit funtion used the "update" method to update items on the database on the tutorial, but the "update_retryable" worked for me. 
+- **Performance - To resolve website performance issues, the following approaches will be considered:**
+    - Optimize images: Compress and resize images to reduce file sizes.
+    - Minify and combine CSS and JavaScript files.
+    - Evaluate server resources for efficient handling of user load.
+    - Implement lazy loading for non-critical resources.
+    - Profile and optimize critical code sections.
 
 ## Credits 
 
@@ -308,8 +300,6 @@ I would like to credit Code Institute for providing easy-to-follow content and a
 ### Content 
 
 - The icons used were taken from [Font Awesome](https://fontawesome.com/)
-- The icons used were taken from [Font Awesome](https://fontawesome.com/)
-- The icons used were taken from [Font Awesome](https://fontawesome.com/)
-
-
+- The images used were taken from [Pexels](https://www.pexels.com/)
+- The item names and descriptions are completley fictional and were conceived with [OpenAI](https://chat.openai.com/)
 
