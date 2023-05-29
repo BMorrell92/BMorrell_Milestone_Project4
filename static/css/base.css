@@ -102,7 +102,7 @@ a.category-badge > span.badge:hover {
 }
 
 .navbar-brand {
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: bold;
   font-family: "Rubik Pixels";
 }
@@ -129,12 +129,12 @@ a.category-badge > span.badge:hover {
 }
 
 .display-4 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 
 .lead {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: whitesmoke; 
 }
