@@ -1,14 +1,15 @@
-{% extends "base.html" %}
+{% extends "base.html" %} <!-- Extend the "base.html" template -->
+
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}"> <!-- Include a CSS file specific to the profile page -->
 {% endblock %}
 
-{% block page_header %}
+{% block page_header %} <!-- Define a block named "page_header" -->
 {% endblock %}
 
-{% block content %}
+{% block content %} <!-- Define a block named "content" -->
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
@@ -21,10 +22,10 @@
         <div class="row">
             <div class="col-12 col-lg-6">
                 <p class="text-muted">Default Delivery Information</p>
-                <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
+                <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form"> <!-- Profile update form -->
                     {% csrf_token %}
-                    {{ form|crispy }}
-                    <button class="btn btn-black rounded-0 text-uppercase float-right">Update Information</button>
+                    {{ form|crispy }} <!-- Render the profile update form fields using crispy forms -->
+                    <button class="btn btn-black rounded-0 text-uppercase float-right">Update Information</button> <!-- Button to update the profile information -->
                 </form>
             </div>
             <div class="col-12 col-lg-6">
@@ -40,27 +41,27 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {% for order in orders %}
+                            {% for order in orders %} <!-- Loop through the orders -->
                                 <tr>
                                     <td>
                                         <a href="{% url 'order_history' order.order_number %}"
                                         title="{{ order.order_number }}">
-                                            {{ order.order_number|truncatechars:6 }}
+                                            {{ order.order_number|truncatechars:6 }} <!-- Display a truncated version of the order number -->
                                         </a>
                                     </td>
                                     <td>{{ order.date }}</td>
                                     <td>
                                         <ul class="list-unstyled">
-                                            {% for item in order.lineitems.all %}
+                                            {% for item in order.lineitems.all %} <!-- Loop through the line items in the order -->
                                                 <li class="small">
-                                                    {% if item.product.has_sizes %}
-                                                        Size {{ item.product.size|upper }}
-                                                    {% endif %}{{ item.product.name }} x{{ item.quantity }}
+                                                    {% if item.product.has_sizes %} <!-- Check if the item has sizes -->
+                                                        Size {{ item.product.size|upper }} <!-- Display the size of the item -->
+                                                    {% endif %}{{ item.product.name }} x{{ item.quantity }} <!-- Display the product name and quantity -->
                                                 </li>
                                             {% endfor %}
                                         </ul>
                                     </td>
-                                    <td>${{ order.grand_total }}</td>
+                                    <td>${{ order.grand_total }}</td> <!-- Display the order's grand total -->
                                 </tr>
                             {% endfor %}
                         </tbody>
@@ -68,9 +69,9 @@
                 </div>
             </div>
         </div>
-{% endblock %}
+{% endblock %} <!-- End of the "content" block -->
 
-{% block postloadjs %}
-    {{ block.super }}
-    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
-{% endblock %}
+{% block postloadjs %} <!-- Define a block named "postloadjs" -->
+    {{ block.super }} <!-- Include the content from the parent block -->
+    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script> <!-- Include a JavaScript file for country field functionality -->
+{% endblock %} <!-- End of the "postloadjs" block -->

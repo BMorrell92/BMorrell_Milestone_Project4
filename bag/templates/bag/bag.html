@@ -1,56 +1,57 @@
-{% extends "base.html" %}
-{% load static %}
-{% load bag_tools %}
+{% extends "base.html" %} <!-- Extend the base.html template -->
 
-{% block page_header %}
-{% endblock %}
+{% load static %} <!-- Load static files such as CSS and JavaScript -->
+{% load bag_tools %} <!-- Load custom template tags from bag_tools -->
 
-{% block content %}
-    <div class="overlay"></div>
-    <div class="container mb-2">
-        <div class="row">
+{% block page_header %} <!-- Define a block named "page_header" -->
+{% endblock %} <!-- End of the "page_header" block -->
+
+{% block content %} <!-- Define a block named "content" -->
+    <div class="overlay"></div> <!-- Overlay element -->
+    <div class="container mb-2"> <!-- Container for the content -->
+        <div class="row"> <!-- Row within the container -->
             <div class="col">
-                <hr>
-                <h2 class="logo-font mb-4">Shopping Bag</h2>
-                <hr>
+                <hr> <!-- Horizontal rule -->
+                <h2 class="logo-font mb-4">Shopping Bag</h2> <!-- Heading for the page -->
+                <hr> <!-- Horizontal rule -->
             </div>
         </div>
 
-        <div class="row">
+        <div class="row"> <!-- Row within the container -->
             <div class="col">
-                {% if bag_items %}
-                    <div class="table-responsive rounded">
-                        <table class="table table-sm table-borderless">
-                            <thead class="text-black">
+                {% if bag_items %} <!-- Check if the bag_items variable is not empty -->
+                    <div class="table-responsive rounded"> <!-- Table container -->
+                        <table class="table table-sm table-borderless"> <!-- Table element -->
+                            <thead class="text-black"> <!-- Table header -->
                                 <tr>
-                                    <th scope="col">Product Info</th>
+                                    <th scope="col">Product Info</th> <!-- Table column for product info -->
                                     <th scope="col"></th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Qty</th>
-                                    <th scope="col">Subtotal</th>
+                                    <th scope="col">Price</th> <!-- Table column for price -->
+                                    <th scope="col">Qty</th> <!-- Table column for quantity -->
+                                    <th scope="col">Subtotal</th> <!-- Table column for subtotal -->
                                 </tr>
                             </thead>
 
-                            {% for item in bag_items %}
+                            {% for item in bag_items %} <!-- Loop through each item in the bag_items variable -->
                                 <tr>
                                     <td class="p-3 w-25">
-                                        {% if item.product.image %}
-                                        <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                        {% if item.product.image %} <!-- Check if the item has an image -->
+                                        <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}"> <!-- Display the item's image -->
                                         {% else %}
-                                        <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                                        <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}"> <!-- Display a default image if no image is available -->
                                         {% endif %}
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                                        <p class="my-0"><strong>Size: </strong>{% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
-                                        <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+                                        <p class="my-0"><strong>{{ item.product.name }}</strong></p> <!-- Display the item's name -->
+                                        <p class="my-0"><strong>Size: </strong>{% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p> <!-- Display the item's size if available -->
+                                        <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p> <!-- Display the item's SKU -->
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">${{ item.product.price }}</p>
+                                        <p class="my-0">${{ item.product.price }}</p> <!-- Display the item's price -->
                                     </td>
                                     <td class="py-3 w-25">
-                                        <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
-                                            {% csrf_token %}
+                                        <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}"> <!-- Form to update the quantity -->
+                                            {% csrf_token %} <!-- CSRF token for form submission -->
                                             <div class="form-group">
                                                 <div class="input-group">
                                                     <div class="input-group-prepend">
@@ -73,41 +74,41 @@
                                                             </span>
                                                         </button>
                                                     </div>
-                                                    {% if item.product.has_sizes %}
-                                                        <input type="hidden" name="product_size" value="{{ item.size }}">
+                                                    {% if item.product.has_sizes %} <!-- Check if the item has sizes -->
+                                                        <input type="hidden" name="product_size" value="{{ item.size }}"> <!-- Include the selected size in the form data -->
                                                     {% endif %}
                                                 </div>
                                             </div>
                                         </form>
-                                        <a class="update-link text-info"><small>Update</small></a>
-                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
+                                        <a class="update-link text-info"><small>Update</small></a> <!-- Link to update the quantity -->
+                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a> <!-- Link to remove the item -->
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                                        <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p> <!-- Display the item's subtotal -->
                                     </td>
                                 </tr>
-                            {% endfor %}
+                            {% endfor %} <!-- End of the item loop -->
                             <tr>
                                 <td colspan="5" class="pt-5 text-right">
-                                    <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
-                                    <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
-                                    <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
-                                    {% if free_delivery_delta > 0 %}
+                                    <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6> <!-- Display the bag total -->
+                                    <h6>Delivery: ${{ delivery|floatformat:2 }}</h6> <!-- Display the delivery cost -->
+                                    <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4> <!-- Display the grand total -->
+                                    {% if free_delivery_delta > 0 %} <!-- Check if free delivery is available -->
                                         <p class="mb-1 text-danger">
-                                            You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
+                                            You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more! <!-- Display the amount needed for free delivery -->
                                         </p>
                                     {% endif %}
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="5" class="text-right">
-                                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg"> <!-- Button to continue shopping -->
                                         <span class="icon">
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
                                         <span class="text-uppercase">Keep Shopping</span>
                                     </a>
-                                    <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
+                                    <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg"> <!-- Button to proceed to checkout -->
                                         <span class="text-uppercase">Secure Checkout</span>
                                         <span class="icon">
                                             <i class="fas fa-lock"></i>
@@ -118,8 +119,8 @@
                         </table>
                     </div>
                 {% else %}
-                    <p class="lead mb-5">Your bag is empty.</p>
-                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                    <p class="lead mb-5">Your bag is empty.</p> <!-- Message when the bag is empty -->
+                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg"> <!-- Button to continue shopping -->
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
@@ -129,11 +130,11 @@
             </div>
         </div>
     </div>
-{% endblock %}
+{% endblock %} <!-- End of the "content" block -->
 
-{% block postloadjs %}
-{{ block.super }}
-{% include 'products/includes/quantity_input_script.html' %}
+{% block postloadjs %} <!-- Define a block named "postloadjs" -->
+{{ block.super }} <!-- Include the content from the parent block -->
+{% include 'products/includes/quantity_input_script.html' %} <!-- Include a script for quantity input functionality -->
 
 <script type="text/javascript">
     // Update quantity on click
@@ -156,4 +157,4 @@
          });
     })
 </script>
-{% endblock %}
+{% endblock %} <!-- End of the "postloadjs" block -->

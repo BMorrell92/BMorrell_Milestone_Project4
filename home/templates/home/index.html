@@ -1,24 +1,21 @@
-{% extends "base.html" %}
-{% load static %}
+{% extends "base.html" %} <!-- Extend the base.html template -->
 
-{% block page_header %}
-    <div class="container header-contianer">
-        <div class="row">
-            <div class="col"></div>
+{% load static %} <!-- Load static files such as CSS and JavaScript -->
+
+{% block page_header %} <!-- Define a block named "page_header" -->
+    <div class="container header-contianer"> <!-- Container for the header -->
+        <div class="row"> <!-- Row within the container -->
+            <div class="col"></div> <!-- Column within the row -->
         </div>
     </div>
-{% endblock %}
+{% endblock %} <!-- End of the "page_header" block -->
 
-{% block content %}
-
-    <div class="jumbotron">
-        <h1 class="display-4">Unique Plant Pots</h1>
-            <p class="lead">Discover our stunning selection of one-of-a-kind plant pots, crafted from 3D-printed molds for a truly unique touch.
-            </p>
-        <hr class="my-4">
-            <p class="lead">Shop now and give your plants the stylish home they deserve.
-            </p>
-            <a class="btn btn-primary btn-lg" href="{% url 'products' %}" role="button">Shop Now</a>
+{% block content %} <!-- Define a block named "content" -->
+    <div class="jumbotron"> <!-- Jumbotron element for the main content -->
+        <h1 class="display-4">Unique Plant Pots</h1> <!-- Heading for the page -->
+        <p class="lead">Discover our stunning selection of one-of-a-kind plant pots, crafted from 3D-printed molds for a truly unique touch.</p> <!-- Lead paragraph describing the product -->
+        <hr class="my-4"> <!-- Horizontal rule -->
+        <p class="lead">Shop now and give your plants the stylish home they deserve.</p> <!-- Another lead paragraph -->
+        <a class="btn btn-primary btn-lg" href="{% url 'products' %}" role="button">Shop Now</a> <!-- Button to link to the products page -->
     </div>
-
-{% endblock %}
+{% endblock %} <!-- End of the "content" block -->
