@@ -7,7 +7,24 @@ html {
   background-size: cover;
   height: calc(100vh - 164px);
   color: #555;
-  font-family: 'Lato';
+  font-family: 'Rubik Pixels';
+}
+
+/* Style for the navigation bar */
+
+.navbar {
+  background-color: bisque;
+}
+
+.navbar-brand {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: "Rubik Pixels";
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  margin-right: 1.5rem;
 }
 
 /* from Bulma */
