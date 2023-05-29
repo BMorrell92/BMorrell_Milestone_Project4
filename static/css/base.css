@@ -8,6 +8,7 @@ html {
   height: calc(100vh - 164px);
   color: #555;
   font-family: 'Rubik Pixels';
+  font-weight: bold;
 }
 
 /* Style for the navigation bar */
@@ -25,6 +26,45 @@ html {
 .nav-link {
   font-size: 1.2rem;
   margin-right: 1.5rem;
+}
+
+/* Style for the footer */
+footer {
+  background-color: lightslategray;
+  color: #fafafa;
+  min-height: 50px;
+  margin: 0;
+}
+
+.social-networks{
+  text-align: center;
+  margin: 0;
+}
+
+.social-networks li{
+  display: inline;
+}
+
+.footer-text {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+
+.social-networks li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-networks a {
+  color: #555;
+  font-size: 20px;
+}
+
+.social-networks a:hover {
+  color: #000;
 }
 
 /* from Bulma */
