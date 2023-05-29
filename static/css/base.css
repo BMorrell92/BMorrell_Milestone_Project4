@@ -2,6 +2,14 @@ html {
   height: 100%;
 }
 
+body {
+  background: url('https://geopotz.s3.eu-west-2.amazonaws.com/static/media/background_image2.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: calc(100vh - 164px);
+  color: #555;
+  font-family: 'Lato';
+}
+
 /* from Bulma */
 .icon {
   align-items: center;
@@ -94,84 +102,6 @@ a.category-badge > span.badge:hover {
   cursor: pointer;
 }
 
-
-/* Style for the navigation bar */
-
-.navbar {
-  background-color: bisque;
-}
-
-.navbar-brand {
-  font-size: 4rem;
-  font-weight: bold;
-  font-family: "Rubik Pixels";
-}
-
-.nav-link {
-  font-size: 1.2rem;
-  margin-right: 1.5rem;
-}
-
-
-/* Style for the jumbotron */
-.jumbotron {
-  background-image: url('https://geopotz.s3.eu-west-2.amazonaws.com/static/media/pot13.jpg');
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  font-weight: bold;
-  font-family: "Rubik Pixels";
-  color: whitesmoke;
-  padding-bottom: 0%;
-  margin-bottom: 0%;
-  
-}
-
-.display-4 {
-  font-size: 3rem;
-  font-weight: bold;
-}
-
-.lead {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: whitesmoke; 
-}
-
-.btn-primary {
-  background-color: #29a745;
-  border-color: #29a745;
-  min-width: 260px;
-}
-
-.btn-primary:hover {
-  background-color: #218838;
-  border-color: #1e7e34;
-}
-
-.overlay {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: white;
-	z-index: -1;
-}
-
-.btt-button {
-  height: 42px;
-  width: 42px;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-}
-
-.btt-link {
-  cursor: pointer;
-}
-
 input[name='q']::placeholder {
   color: #aab7c4;
 }
@@ -192,7 +122,6 @@ input[name='q']::placeholder {
 .toast-capper {
   height: 2px;
 }
-
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
@@ -245,43 +174,13 @@ input[name='q']::placeholder {
   overflow-y: auto;
 }
 
-/* Style for the footer */
-footer {
-  background-color: lightslategray;
-  color: #fafafa;
-  min-height: 50px;
-  margin: 0;
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+.container {
+  max-width: 80%;
 }
-
-.social-networks{
-  text-align: center;
-  margin: 0;
-}
-
-.social-networks li{
-  display: inline;
-}
-
-.footer-text {
-  text-align: center;
-  font-size: 14px;
-  color: #777;
-  margin-bottom: 10px;
-}
-
-
-.social-networks li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.social-networks a {
-  color: #555;
-  font-size: 20px;
-}
-
-.social-networks a:hover {
-  color: #000;
 }
 
 /* Allauth form formatting */
@@ -338,73 +237,57 @@ color: #fff;
 color: #17a2b8; /* text-info */
 }
 
- /* -------------------------------- Media Queries */
+/* Product Form */
 
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
+.btn-file {
+  position: relative;
+  overflow: hidden;
 }
+
+.btn-file input[type="file"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+  border-radius: 0;
+  border-color: #dc3545;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  border-radius: 0;
+}
+
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
+  .fixed-top-desktop-only {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1030;
+  }
 
-    .header-container {
-        padding-top: 164px;
-    }
+  .header-container {
+      padding-top: 164px;
+  }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
-    .header-container {
-        padding-top: 116px;
-    }
+  .header-container {
+      padding-top: 116px;
+  }
 
-    body {
-        height: calc(100vh - 116px);
-    }
-} 
-
-.display-4.logo-font.text-black {
-  font-size: 2rem;
-}
-
-.nav-link {
-  padding: 0.15rem;
-}
-
-.nav-link i.fa-lg {
-  font-size: 1rem;
-}
-
-.navbar-toggler {
-  padding: .6rem .6rem;
-  font-size: 1rem;
-}
-
-#delivery-banner h4 {
-  font-size: .9rem;
-}
-
-.btn.btn-outline-black.rounded-0,
-.btn.btn-black.rounded-0 {
-  padding: .375rem .375rem;
-}
-
-.btn.btn-outline-black.rounded-0.btn-lg,
-.btn.btn-black.rounded-0.btn-lg {
-  padding: .375rem .375rem;
-  font-size: .75rem;
-}
-
-.increment-qty, .decrement-qty {
-  padding: .25rem .5rem !important;
+  body {
+      height: calc(100vh - 116px);
+  }
 }
