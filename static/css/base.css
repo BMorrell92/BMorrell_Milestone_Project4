@@ -351,6 +351,7 @@ color: #17a2b8; /* text-info */
 
   .header-container {
       padding-top: 50px;
+      padding-bottom: 300px;
   }
 }
 
