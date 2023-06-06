@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 
 from .models import Product
 
+
 class ProductTest(TestCase):
     def setUp(self):
         # Create a test user
