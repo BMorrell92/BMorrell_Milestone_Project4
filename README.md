@@ -82,7 +82,7 @@
 
 ### Database Model
 
-[View the schematic of my relational database here:](https://github.com/BMorrell92/BMorrell_Milestone_Project4/blob/main/media/MSP4%20Wireframes.pdf) 
+[View the schematic of my relational database here:](https://github.com/BMorrell92/BMorrell_Milestone_Project4/blob/main/media/GeoPotz_DB_Schema.pdf) 
 
 ### Typograhpy
 
