@@ -26,6 +26,7 @@
 - [Store Owner Stories](#store-owner-stories)
 - [Website Structure and Features](#Website-Structure-and-Features)
   + [Wireframes](#wireframes)
+  + [Database Model](#database-model)
   + [Typography](#typography)
   + [Website Features](#website-features)
   + [Future Feautures](#future-features)
@@ -37,12 +38,15 @@
   + [Validator Testing](#validtor-testing)
   + [Validator Testing](#validtor-testing)
   + [Lighthouse Reports](#lighthouse-reports)
-  + [Challenging User Stories](#Challenging-User-Stories)
+  + [Challenging User Stories](#challenging-user-stories)
   + [Challenging Store Owner Stories](#challenging-store-owner-stories)
 - [Future Testing](#future-testing)
 - [Bugs](#bugs)
   + [Unresolved](#unresolved)
 - [Credits](#credits)
+- [Deployment](#deployment)
+  + [Heroku](#heroku)
+  + [Static Files and Database](#static-files-and-database)
   + [Content](#content)
   
 
@@ -74,7 +78,11 @@
 
 ### Wireframes
 
-[View my wireframes in PDF format here.](https://github.com/BMorrell92/BMorrell_Milestone_Project4/blob/main/media/MSP4%20Wireframes.pdf) It should be noted, that the wireframes do not exactly match the final product, however, it does capture the main structure.
+[View my wireframes in PDF format here:](https://github.com/BMorrell92/BMorrell_Milestone_Project4/blob/main/media/MSP4%20Wireframes.pdf) It should be noted, that the wireframes do not exactly match the final product, however, it does capture the main structure.
+
+### Database Model
+
+[View the schematic of my relational database here:](https://github.com/BMorrell92/BMorrell_Milestone_Project4/blob/main/media/MSP4%20Wireframes.pdf) 
 
 ### Typograhpy
 
@@ -113,7 +121,7 @@ Order Tracking and Notifications: Stay updated on the status of your orders incl
 4. [Bootstrap framework for structuring](http://getbootstrap.com/)
 5. [Github for Repo creation and managment](https://github.com/)
 6. [Gitpod for file creation and code editing](https://gitpod.io/)
-7. [Figma was used to create Wireframes for the project](https://www.figma.com/)
+7. [Figma was used to create Wireframes and DB Schema for the project](https://www.figma.com/)
 8. [Google Chrome's Dev Tools were used while building the project to test responsiveness, functionality and for debugging](https://developer.chrome.com/docs/devtools/)
 9. [The icons used were taken from Font Awesome](https://fontawesome.com/)
 10. [MongoDB to create and manage the database](https://mongodb.com)
@@ -280,7 +288,6 @@ I conducted accessibility and performance testing to ensure the online store is 
 
 - Automated Emails: Once automated emails have been enabled, their functionality will be tested.
 
-
 ## Bugs
 
 ### Unresolved
@@ -291,6 +298,36 @@ I conducted accessibility and performance testing to ensure the online store is 
     - Evaluate server resources for efficient handling of user load.
     - Implement lazy loading for non-critical resources.
     - Profile and optimize critical code sections.
+
+
+## Deployment
+
+GeoPotz has been deployed using Heroku, with static files stored on Amazon AWS and the database hosted on ElephantSQL. In general, the steps to deploy the application are listed below.
+
+### Heroku
+
+The following steps were followed to deploy the web store on Heroku:
+
+1. Log in to the Heroku account and create a new app.
+2. Connect Heroku app to GitHub repository.
+3. Set up the necessary environment variables in the Heroku app settings. This includes database credentials, AWS S3 configuration, and other settings specified in your project.
+4. Deploy the application to Heroku by triggering a manual deployment and enabling automatic deployments from GitHub repository.
+5. Once the deployment is complete, use Heroku app's URL to access GeoPotz.
+
+### Static Files and Database
+
+To store static files on Amazon AWS, the steps were:
+
+1. Create an S3 bucket in AWS account.
+2. Configure the bucket permissions to allow public access for static files.
+3. Set the appropriate environment variables in Heroku app settings for AWS S3 configuration (AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_STORAGE_BUCKET_NAME).
+
+For the database hosted on ElephantSQL, the steps were:
+
+1. Create a PostgreSQL database instance in ElephantSQL.
+2. Retrieve the database connection URL provided by ElephantSQL.
+3. Set the DATABASE_URL environment variable in your Heroku app settings to the ElephantSQL database URL.
+   
 
 ## Credits 
 
